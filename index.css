@@ -1,0 +1,9 @@
+:root{
+    --fondo-header: #5F04D9;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--fondo-header);
+}

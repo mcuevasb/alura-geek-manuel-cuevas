@@ -1,9 +1,170 @@
 :root{
     --fondo-header: #5F04D9;
+    --borde-card: black;
+    --fondo-submit: #03318C;
 }
 
-header {
+.geek-header {
     display: flex;
     justify-content: center;
     background-color: var(--fondo-header);
+}
+
+.geek-footer {
+    display: flex;
+    flex-flow: column;
+    background-color: var(--fondo-header);
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.geek-main{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+h1{
+    font-family: "Press Start 2P";
+    font-size: medium;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    text-align: center;
+}
+
+.geek-products{
+    min-width: 300px;
+    max-width: 700px;
+    max-height: 50vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.geek-list{
+
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: wrap;
+    padding: 1rem;
+}
+
+/*Form*/
+.geek-agregar{
+    min-width: 25%;
+}
+
+.geek-form{
+    display: flex;
+    flex-flow: column;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 1rem;
+}
+
+.geek-buttons{
+    display: flex;
+    justify-content:space-between;
+    
+}
+
+.geek-input{
+    border-radius: 20px;
+    border-width: medium;
+    border-style: solid;
+    border-color: var(--fondo-submit);
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+button{
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--fondo-submit);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: large;
+    height: 40px;
+    margin: 10px;
+    padding-left: 10px;
+    width: 40%;
+}
+
+::placeholder{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+button.geek-submit{
+    background-color: var(--fondo-submit);
+    color: white;
+}
+
+button.geek-button{
+    background-color: white;
+    color: var(--fondo-submit);
+}
+
+
+/*Card*/
+
+.card{
+    background-color: var(--fondo-header);
+    border-style: solid;
+    border-width: medium;
+    border-radius: 15px;
+    border-color: var(--borde-card);
+    display: flex;
+    flex-flow: column;
+    font-family: "Courier";
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.card-image{
+    width: auto;
+    height: auto;
+    max-width: 140px;
+    max-height: 140px;
+    border-style: solid;
+    border-width: medium;
+    border-radius: 10px;
+    border-color: var(--borde-card);
+
+}
+
+.card-footer{
+    display: flex;
+    flex-flow: column;
+    padding-top: 10px;
+}
+
+.card-info{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.card-info-icon{
+    width: auto;
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.card-price{
+    font-weight: bold;
 }

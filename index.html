@@ -5,20 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>challenge AluraGeek</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="js/api.js"></script>
 </head>
 <body>
-        <header>
+        <header class="geek-header">
             <img src="assets/logo.png" alt="logo">
         </header>
 
-        <main>
-            <section></section>
-            <section>
-                <form action="">
+        <main class="geek-main">
+
+            <section class="geek-products">
+
+                <h1 class="geek-title">MIS PRODUCTOS:</h1>
+
+                <section id="listaProductos" class="geek-list">
+
+                    <h2>No se han cargado productos</h2>
+
+                </section>
+
+
+            </section>
+            <section class="geek-agregar">
+                <h1 class="geek-title">AGREGAR PRODUCTO:</h1>
+                <form class="geek-form" action="">
+                    <input type="text" class="geek-input" name="nombre" id="nombre" placeholder="nombre...">
+                    <input type="text" class="geek-input" name="precio" id="precio"placeholder="precio...">
+                    <input type="text" class="geek-input" name="imagen" id="imagen" placeholder="imagen...">
+                    <div class="geek-buttons">
+                        <button class="geek-submit" type="submit">Enviar</button>
+                        <button class="geek-button" name="limpiar">Limpiar</button>
+                    </div>
                     
                 </form>
             </section>
         </main>
+
+        <footer class="geek-footer">
+            <div><img src="assets/logo.png" alt="logo"></div>
+            <div>Desarrollador por Manuel Cuevas <b>(2024)<b></div>
+            <div<b> ALURA LATAM (2024)<b></div>
+        </footer>
+
+        <script>
+            const botonLimpiar = document.getElementsByName("limpiar")
+            botonLimpiar[0].addEventListener("onclick", (event) => {event.preventDefault()});
+
+            const listaProductos = document.getElementById("listaProductos")
+
+                getProductos().then(response => {response.map((producto) => {listaProductos.innerHTML += getCard(producto)})})
+
+        </script>
     
 </body>
+
 </html>

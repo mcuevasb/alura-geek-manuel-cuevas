@@ -23,7 +23,7 @@
 
                 <section id="listaProductos" class="geek-list">
 
-                    <!-- <h2>No se han cargado productos</h2> -->
+                    <h2>No se han cargado productos</h2>
 
                 </section>
 
@@ -68,8 +68,20 @@
             }
       
             const listaProductos = document.getElementById("listaProductos")
-            getProductos().then(response => {response.map((producto) => {listaProductos.innerHTML += getCard(producto)})})
+            
+            getProductos().then(response => {
 
+                
+                if(response.length!=0)
+                listaProductos.innerHTML = ""
+        
+                    response.map((producto) => {listaProductos.innerHTML += getCard(producto)})
+                })
+
+            
+
+            console.log(listaProductos.innerHTML)
+            
             const botonLimpiar = document.getElementById("limpiar")
             botonLimpiar.addEventListener("click", (event)=>{resetForm(event)})
 

@@ -5,12 +5,12 @@ async function getProductos(){
     const response = await fetch(url)
     const productos = await response.json()
     
-    return productos    
+    return productos
 }
 
 function getCard(producto){
 
-     const card = `<div class='card'>` + 
+     const card = `<div class='geek-card'>` + 
     `<img class='card-image' src='${producto.imagen}' alt=''>` +
     `<div class='card-footer'>` + 
         `<div>${producto.nombre}</div>` + 

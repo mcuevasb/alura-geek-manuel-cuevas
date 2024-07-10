@@ -1,6 +1,3 @@
-
-
-
 async function getProductos(){
 
     const url="http://localhost:8000/productos"
@@ -46,21 +43,13 @@ async function agregarProducto(nombre, precio, imagen)
   //  .then(data => console.log(data))
 }
 
-async function borrarProducto(idText){
+async function borrarProducto(id){
 
-    const url="http://localhost:8000/productos"
-
-    id = parseInt(idText)
-    
-    const data = { id }
-
-    alert(JSON.stringify(data))
+    const url="http://localhost:8000/productos/" + id
 
     await fetch(url, {
-        method: 'DELETE', 
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(data), 
+        method: 'DELETE'
     })
-    .then(response => response.json())
+    .then(alert("Borrado producto id:" + id))
     //.then(data => console.log(data))
 }

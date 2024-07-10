@@ -1,34 +1,70 @@
 {
-    "productos": [
-        {
-            "nombre": "Lego Emmet",
-            "precio": "$50.00",
-            "imagen": "https://static.wikia.nocookie.net/lego/images/c/cf/Emmet_Minifig.jpg",
-            "id": "1"
-        },
-        {
-            "nombre": "Lego Darth Vather",
-            "precio": "$80.00",
-            "imagen": "https://i.pinimg.com/originals/32/df/a8/32dfa89ac380a5755ced30bc7953b740.jpg",
-            "id": "2"
-        },
-        {
-            "nombre": "Lego Batman",
-            "precio": "$65.00",
-            "imagen": "https://i.pinimg.com/originals/10/3d/20/103d205560117cc031c876327e2db73c.jpg",
-            "id": "3"
-        },
-        {
-            "nombre": "Lego Lucy",
-            "precio": "$50.00",
-            "imagen": "https://i.pinimg.com/originals/3c/fb/a4/3cfba431dd847be52ddb504d7c4b9458.jpg",
-            "id": "4"
-        },
-        {
-            "nombre": "Lego Joker",
-            "precio": "$70.00",
-            "imagen": "https://i.pinimg.com/originals/a4/76/ea/a476ead8270d98a010897ff61602135d.jpg",
-            "id": "5"
-        }
-    ]
+  "productos": [
+    {
+      "nombre": "Lego Emmet",
+      "precio": "$50.00",
+      "imagen": "https://static.wikia.nocookie.net/lego/images/c/cf/Emmet_Minifig.jpg",
+      "id": 1
+    },
+    {
+      "nombre": "Lego Darth Vather",
+      "precio": "$80.00",
+      "imagen": "https://i.pinimg.com/originals/32/df/a8/32dfa89ac380a5755ced30bc7953b740.jpg",
+      "id": 2
+    },
+    {
+      "nombre": "Lego Batman",
+      "precio": "$65.00",
+      "imagen": "https://i.pinimg.com/originals/10/3d/20/103d205560117cc031c876327e2db73c.jpg",
+      "id": 3
+    },
+    {
+      "nombre": "Lego Lucy",
+      "precio": "$50.00",
+      "imagen": "https://i.pinimg.com/originals/3c/fb/a4/3cfba431dd847be52ddb504d7c4b9458.jpg",
+      "id": 4
+    },
+    {
+      "nombre": "Lego Joker",
+      "precio": "$70.00",
+      "imagen": "https://i.pinimg.com/originals/a4/76/ea/a476ead8270d98a010897ff61602135d.jpg",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "nombre": "Lego Superman",
+      "precio": "$100.00",
+      "imagen": "https://images.brickset.com/minifigs/large/sh003.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Lego Flash",
+      "precio": "$40.00",
+      "imagen": "https://i.pinimg.com/originals/13/d9/53/13d953e615be905dbf42056c3928553f.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Lego Gandalf",
+      "precio": "$150.00",
+      "imagen": "https://i.pinimg.com/564x/12/f0/e7/12f0e7207f8fc3124649528cf76f87d3.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Lego Spiderman",
+      "precio": "$90.00",
+      "imagen": "https://i.pinimg.com/originals/76/d7/5d/76d75d435fb8481c5fc976ceee848e32.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Lego Harry Potter",
+      "precio": "$62.00",
+      "imagen": "https://i.pinimg.com/564x/ca/fb/39/cafb398f7c4452a809fec0baf0dca1d2.jpg"
+    },
+    {
+      "id": 11,
+      "nombre": "Lego Stormtrooper",
+      "precio": "$55.00",
+      "imagen": "https://i.pinimg.com/736x/05/36/1c/05361c7c67263ac9670c9803a32c8dc5.jpg"
+    }
+  ]
 }

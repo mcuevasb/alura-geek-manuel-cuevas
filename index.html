@@ -23,7 +23,7 @@
 
                 <section id="listaProductos" class="geek-list">
 
-                    <h2>No se han cargado productos</h2>
+                    <!-- <h2>No se han cargado productos</h2> -->
 
                 </section>
 
@@ -31,13 +31,13 @@
             </section>
             <section class="geek-agregar">
                 <h1 class="geek-title">AGREGAR PRODUCTO:</h1>
-                <form class="geek-form" action="">
+                <form class="geek-form" action="" >
                     <input type="text" class="geek-input" name="nombre" id="nombre" placeholder="nombre...">
                     <input type="text" class="geek-input" name="precio" id="precio"placeholder="precio...">
                     <input type="text" class="geek-input" name="imagen" id="imagen" placeholder="imagen...">
                     <div class="geek-buttons">
-                        <button class="geek-submit" type="submit">Enviar</button>
-                        <button class="geek-button" name="limpiar">Limpiar</button>
+                        <button class="geek-submit" type="submit" id="enviar">Enviar</button>
+                        <button class="geek-button" id="limpiar">Limpiar</button>
                     </div>
                     
                 </form>
@@ -51,12 +51,32 @@
         </footer>
 
         <script>
-            const botonLimpiar = document.getElementsByName("limpiar")
-            botonLimpiar[0].addEventListener("onclick", (event) => {event.preventDefault()});
 
+            function resetForm(event){
+                event.preventDefault()
+                document.forms[0].reset()
+            }
+
+            function enviarProducto(){
+                
+                const nombre = document.getElementById("nombre").value
+                const precio = document.getElementById("precio").value
+                const imagen = document.getElementById("imagen").value
+
+                agregarProducto(nombre, precio, imagen)
+
+            }
+      
             const listaProductos = document.getElementById("listaProductos")
+            getProductos().then(response => {response.map((producto) => {listaProductos.innerHTML += getCard(producto)})})
 
-                getProductos().then(response => {response.map((producto) => {listaProductos.innerHTML += getCard(producto)})})
+            const botonLimpiar = document.getElementById("limpiar")
+            botonLimpiar.addEventListener("click", (event)=>{resetForm(event)})
+
+            const botonEnviar = document.getElementById("enviar")
+            botonEnviar.addEventListener("click", ()=>{enviarProducto()}) 
+                
+            
 
         </script>
     
